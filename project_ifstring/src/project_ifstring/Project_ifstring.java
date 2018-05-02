@@ -24,6 +24,7 @@ public class Project_ifstring {
         nama=inputan.nextLine();
         System.out.print("jenis kelamin [L/P] : ");
         jk=inputan.nextLine();
+        /*
         if ("P".equals(jk)||"p".equals(jk)){
             System.out.print(nama+"berjenis kelamin perempuan");
         }
@@ -32,6 +33,18 @@ public class Project_ifstring {
         }
         else {
             System.out.print("maaf"+nama+ "jenis kelamin anda tidak terdeteksi");
+        }
+        */ 
+        switch (jk){
+            case "P":
+                System .out.print(nama+"berjenis kelamin perempuan");
+                break;
+            case "L":
+                System.out.print(nama+"berjenis kelamin laki-laki");
+                break;
+            default:
+                System.out.print("maaf"+nama+"jenis kelamin anda tidak terdeteksi");
+                break;
         }
     }
     
