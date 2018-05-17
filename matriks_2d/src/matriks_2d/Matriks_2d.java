@@ -93,6 +93,42 @@ public class Matriks_2d {
             System.out.println("]");
         }
         
+        int hasil_perkalian[][]=new int[2][2];
+        
+        /*hasil_perkalian[0][0]=matriks_a[0][0]*matriks_b[0][0]+matriks_a[0][1]*matriks_b[1][0];
+        hasil_perkalian[0][1]=matriks_a[0][0]*matriks_b[0][1]+matriks_a[0][1]*matriks_b[1][1];
+        hasil_perkalian[1][0]=matriks_a[1][0]*matriks_b[0][0]+matriks_a[1][1]*matriks_b[1][0];
+        hasil_perkalian[1][1]=matriks_a[1][0]*matriks_b[0][1]+matriks_a[1][1]*matriks_b[1][1];
+        
+        System.out.println();
+        System.out.println("matriks A * matriks B");
+        for(int i=0;i<2;i++){
+            System.out.print("[");
+            for(int j=0;j<2;j++){
+               System.out.print(hasil_perkalian[i][j]+" ");
+            }
+            System.out.println("]");
+        }
+        */
+        for(int i=0;i<2;i++){
+            for(int j=0;j<2;j++){
+                int hasil=0;
+                for(int k=0;k<2;k++){
+                    //System.out.println(" i : "+i+" k : "+k+" j : "+j);
+                    hasil+=matriks_a[i][k]*matriks_b[k][j];
+                }
+                hasil_perkalian[i][j]=hasil;
+            }
+        }
+        System.out.println();
+        System.out.println("matriks A * matriks B");
+        for(int i=0;i<2;i++){
+            System.out.print("[");
+            for(int j=0;j<2;j++){
+               System.out.print(hasil_perkalian[i][j]+" ");
+            }
+            System.out.println("]");
+        }
         /*System.out.println("["+hasil_penjumlahan[0][0]+" "+hasil_penjumlahan[0][1]+"]");
         System.out.println("["+hasil_penjumlahan[1][0]+" "+hasil_penjumlahan[1][1]+"]");*/
     }
